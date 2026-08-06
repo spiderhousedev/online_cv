@@ -1,6 +1,5 @@
 
 import './Profile.css';
-import profilePic from '../src/assets/me.jpeg';
 import Icons from './Icons';
 
 function Profile() {
@@ -10,7 +9,7 @@ function Profile() {
 
             <div className="profile-parent">
                 <div id="profile-div2" className="content-grid">
-                    <img id='profile-img' alt="Profile Picture" src={profilePic}/>
+                    <img id="profile-img" src={`${import.meta.env.BASE_URL}me.jpeg`} alt="Charlie Starling" />
                 </div>
                 <div id="profile-div3" className="content-grid">
                     <h1 id='profile-name'>Charlie Starling </h1>

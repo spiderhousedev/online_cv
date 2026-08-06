@@ -19,7 +19,7 @@
     height: 100%;
     width: auto;
     border-radius: 50%;
-    border: 3px solid hsl(57, 69%, 94%);
+    border: 3px solid hsla(277, 82%, 80%, 0.881);
 }
 
 .grid-item {
