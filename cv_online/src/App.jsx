@@ -1,12 +1,9 @@
 
-
-import SparklesPreview from "../components/ui/SparklesPreview";
+import PageSetup from "./PageSetup";
 
 function App() {
   return (
-    <main className="min-h-screen bg-neutral-950">
-      <SparklesPreview />
-    </main>
+    <PageSetup />
   );
 }
 

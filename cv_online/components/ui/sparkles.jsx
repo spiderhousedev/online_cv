@@ -48,7 +48,7 @@ export const SparklesCore = (props) => {
               },
             },
             fullScreen: {
-              enable: true,
+              enable: false,
               zIndex: 1,
             },
 
@@ -67,7 +67,7 @@ export const SparklesCore = (props) => {
               },
               modes: {
                 push: {
-                  quantity: 4,
+                  quantity: 2,
                 },
                 repulse: {
                   distance: 200,
