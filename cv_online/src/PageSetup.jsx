@@ -3,14 +3,14 @@ import SparklesPreview from "../components/ui/SparklesPreview";
 
 function PageSetup() {
     return (
-        <main className="relative min-h-screen overflow-hidden bg-neutral-950">
+        <main className="relative min-h-screen overflow-x-hidden bg-neutral-950">
             {/* Sparkles background */}
-            <div className="absolute inset-0 z-0">
+            <div className="fixed inset-0 z-0">
                 <SparklesPreview />
             </div>
 
             {/* Grid with padding around the edges */}
-            <div className="absolute inset-8 z-10">
+            <div className="relative z-10 p-8">
                 <Grid />
             </div>
         </main>
