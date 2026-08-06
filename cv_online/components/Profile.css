@@ -1,0 +1,58 @@
+
+.profile-parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 8px;
+    border: 3px solid hsl(57, 69%, 94%);
+    height: 100%;
+    width: 100%;
+    text-align: center;
+
+}
+
+#profile-div2{
+    border: none;
+}
+
+#profile-img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid hsl(57, 69%, 94%);
+}
+
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid hsl(57, 69%, 94%);
+    border-radius: 8px;
+    color: hsl(57, 69%, 94%);
+    text-align: center;
+    font-size: 2rem;
+
+}
+
+#profile-div2 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 2;
+}
+
+#profile-div3 {
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+
+#profile-div4 {
+    grid-row-start: 4;
+}
+
+#profile-div5 {
+    grid-row-start: 4;
+}
+
+#profile-div6 {
+    grid-row-start: 4;
+}
+        

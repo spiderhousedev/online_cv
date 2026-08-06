@@ -1,5 +1,6 @@
 
 import './Grid.css';
+import Profile from '../components/Profile';
 
 function Grid() {
 
@@ -7,7 +8,9 @@ function Grid() {
         <>
 
             <div className="parent absolute inset-0 z-0">
-                <div id="div1" className="content-grid">1</div>
+                <div id="div1" className="content-grid">
+                    <Profile />
+                </div>
                 <div id="div2" className="content-grid">2</div>
                 <div id="div3" className="content-grid">3</div>
                 <div id="div4" className="content-grid">4</div>
