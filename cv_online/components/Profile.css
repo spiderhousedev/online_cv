@@ -53,6 +53,13 @@
     height: max-content;
 }
 
+#profile-div4, #profile-div5, #profile-div6 {
+    font-size: 1.5rem;
+    width: auto;
+    height: max-content;
+    border:none;
+}
+
 #profile-name {
     margin: 0;
     font-size: 2.5rem;
