@@ -11,8 +11,15 @@
 }
 
 .content-grid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 3px solid hsl(57, 69%, 94%);
     border-radius: 8px;
+    color: hsl(57, 69%, 94%);
+    text-align: center;
+    font-size: 2rem;
+
 }
     
 #div1 {
