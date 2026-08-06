@@ -4,7 +4,6 @@ function Icons({ url, name }) {
     return (
         <div className="icon">
             <SocialIcon url={url} />
-            <p>{name}</p>
         </div>
     );
 }

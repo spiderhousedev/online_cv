@@ -17,13 +17,14 @@ function Profile() {
                     <h3 id='profile-title'>Software Engineer</h3>
                 </div>
                 <div id="profile-div4" className="content-grid">
-                    <Icons url="https://www.linkedin.com/in/charlie-starling/" name="LinkedIn"/>
+                    <Icons url="https://www.linkedin.com/in/charlie-starling/" />
                 </div>
                 <div id="profile-div5" className="content-grid">
-                    <Icons url="https://github.com/spiderhousedev" name="GitHub"/>
+                    <Icons url="https://github.com/spiderhousedev" />
+                    <Icons url="https://instagram.com/charliestarling" />
                 </div>
                 <div id="profile-div6" className="content-grid">
-                    <Icons url="mailto:contact.cstarlingdev@gmail.com" name="Email"/>
+                    <Icons url="mailto:contact.cstarlingdev@gmail.com" />
                 </div>
             </div>
     
