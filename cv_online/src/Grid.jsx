@@ -7,7 +7,7 @@ function Grid() {
     return (
         <>
 
-            <div className="parent absolute inset-0 z-0">
+            <div className="parent z-0">
                 <div id="div1" className="content-grid">
                     <Profile />
                 </div>
