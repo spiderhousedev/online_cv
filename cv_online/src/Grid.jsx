@@ -14,7 +14,9 @@ function Grid() {
                 </div>
                 <div id="about-div" className="content-grid">About / Education</div>
 
-                <div id="skills-div" className="content-grid">Skills</div>
+                <div id="skills-div" className="content-grid">
+                    <Heading title="Skills" />
+                </div>
                 <div id="skill-item-1" className="content-grid">1</div>
                 <div id="skill-item-2" className="content-grid">2</div>
                 <div id="skill-item-3" className="content-grid">3</div>
@@ -31,7 +33,9 @@ function Grid() {
                 <div id ="project-item-4" className="content-grid">4</div>
                 
 
-                <div id="working-div" className="content-grid">What I'm working on</div>
+                <div id="working-div" className="content-grid">
+                    <Heading title="What I'm Working On" />
+                </div>
                 <div id="working-item-1" className="content-grid">1</div>
                 <div id="working-item-2" className="content-grid">2</div>
                 <div id="working-item-3" className="content-grid">3</div>

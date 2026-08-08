@@ -31,7 +31,8 @@
     align-items: center;
     justify-content: center;
 
-    border: 3px solid hsl(57, 69%, 94%);
+    /* border: 3px solid hsl(57, 69%, 94%); */
+    border: 3px solid hsla(277, 82%, 80%, 0.881);
     border-radius: 8px;
 
     color: hsl(57, 69%, 94%);

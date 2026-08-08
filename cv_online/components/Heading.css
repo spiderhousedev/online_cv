@@ -1,5 +1,14 @@
 
 
 .Heading-Component {
-    color: hsla(277, 82%, 80%, 0.881);
+    /* color: hsla(277, 82%, 80%, 0.881); */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: hsla(0, 0%, 29%, 0.649); 
+    /* background: hsla(277, 82%, 80%, 0.881); */
+    height: 100%;
+    width: 100%;
 }
