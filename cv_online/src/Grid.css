@@ -87,7 +87,40 @@ PROJECTS
     min-width: 0;
 }
 
+/* Education Note */
+#edu-note {
+    grid-column: 1 / 7;
+    grid-row: 7 / span 1;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+
+    border: none;
+
+    text-align: center;
+}
+
+/* Centre the Heading component's contents */
+#edu-note .section-heading {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Education title */
+#edu-note .section-heading h2 {
+    text-align: center;
+}
+
+/* Education subtitle */
+#edu-note .section-heading p {
+    text-align: center;
+}
 /* Projects heading spans full width */
 
 #projects-heading {
@@ -310,13 +343,46 @@ WORKING ITEMS
 CONTACT
 ========================================= */
 
-#contact-div {
+#contact-section {
     grid-column: 7 / 13;
-
-    /* Moved up from row 11 */
     grid-row: 10 / span 1;
+
+    width: 100%;
+    min-width: 0;
 }
 
+#contact-heading {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+}
+
+#contact-heading .section-heading {
+    width: 100%;
+    height: 100%;
+
+    box-sizing: border-box;
+
+    /* reserve space for icons */
+    padding-right: 300px;
+}
+
+#contact-icons {
+    position: absolute;
+
+    right: 28px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    z-index: 2;
+}
 
 /* =========================================
 TABLET
@@ -335,34 +401,24 @@ TABLET
         min-height: 0;
     }
 
-
-    /* Reset desktop positioning */
-
+    /* Put all major sections into normal flow */
     #profile-div,
-    #about-div,
+    #edu-note,
     #projects-section,
     #skills-section,
-    #working-div,
-    #working-item-1,
-    #working-item-2,
-    #working-item-3,
-    #contact-div {
-        grid-column: auto;
-        grid-row: auto;
-    }
-
-
-    /* Main sections use full tablet width */
-
-    #profile-div,
-    #about-div,
-    #projects-section,
-    #skills-section,
-    #working-div,
-    #contact-div {
+    #working-section,
+    #contact-section {
         grid-column: 1 / -1;
+        grid-row: auto;
+
+        width: 100%;
+        min-width: 0;
     }
 
+
+    /* ========================= */
+    /* PROFILE */
+    /* ========================= */
 
     #profile-div {
         height: auto;
@@ -370,13 +426,23 @@ TABLET
     }
 
 
-    /* Projects */
+    /* ========================= */
+    /* EDUCATION */
+    /* ========================= */
+
+    #edu-note {
+        height: auto;
+        min-height: 130px;
+    }
+
+
+    /* ========================= */
+    /* PROJECTS */
+    /* ========================= */
 
     #projects-section {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-template-rows: auto;
-
-        width: 100%;
 
         gap: 10px;
     }
@@ -391,46 +457,37 @@ TABLET
     }
 
 
-    /* Skills */
+    /* ========================= */
+    /* SKILLS */
+    /* ========================= */
 
     #skills-section {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        grid-template-rows: auto;
-
-        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
 
         gap: 10px;
     }
 
     #skills-heading {
-        grid-column: 1 / -1;
+        grid-column: 1;
         grid-row: auto;
     }
 
     .skills-card {
+        grid-column: 1;
+        grid-row: auto;
+
         min-height: 220px;
     }
 
 
-    /* Working cards remain two-column capable */
-
-    #working-item-1,
-    #working-item-2,
-    #working-item-3 {
-        grid-column: auto;
-        grid-row: auto;
-    }
-
-    /* Working */
+    /* ========================= */
+    /* CURRENT INTERESTS */
+    /* ========================= */
 
     #working-section {
-        grid-column: 1 / -1;
-        grid-row: auto;
-
         grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-template-rows: auto;
-
-        width: 100%;
 
         gap: 10px;
     }
@@ -441,10 +498,30 @@ TABLET
     }
 
     .working-card {
+        grid-column: auto;
+        grid-row: auto;
+
         min-height: 220px;
     }
-}
 
+
+    /* ========================= */
+    /* CONTACT */
+    /* ========================= */
+
+    #contact-section {
+        min-height: 130px;
+    }
+
+    #contact-heading .section-heading {
+        padding-right: 250px;
+    }
+
+    #contact-icons {
+        right: 22px;
+        gap: 12px;
+    }
+}
 
 /* =========================================
 PHONE
@@ -464,35 +541,121 @@ PHONE
     }
 
 
+    /* Everything becomes one outer column */
+
     #profile-div,
-    #about-div,
+    #edu-note,
     #projects-section,
     #skills-section,
-    #working-div,
-    #working-item-1,
-    #working-item-2,
-    #working-item-3,
-    #contact-div {
+    #working-section,
+    #contact-section {
         grid-column: 1;
         grid-row: auto;
+
+        width: 100%;
+        min-width: 0;
     }
 
 
-    #profile-div {
+    /* ========================= */
+    /* PROFILE */
+    /* ========================= */
+
+    .profile-parent {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+
+        justify-items: center;
+        align-items: center;
+
+        width: 100%;
         height: auto;
-        min-height: 0;
+
+        gap: 16px;
+    }
+
+    #profile-div2 {
+        grid-column: 1;
+        grid-row: 1;
+
+        width: 180px;
+        height: 180px;
+
+        min-width: 0;
+
+        justify-self: center;
+        align-self: center;
+
+        margin: 0 auto;
+    }
+
+    #profile-img,
+    .profile-ascii {
+        width: 180px;
+        height: 180px;
+    }
+
+    #profile-div3 {
+        grid-column: 1;
+        grid-row: 2;
+
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+    }
+
+    #profile-socials {
+        grid-column: 1;
+        grid-row: 3;
+
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        margin: 0;
+        padding: 0;
     }
 
 
-    /* Projects */
+    /* ========================= */
+    /* EDUCATION */
+    /* ========================= */
+
+    #edu-note {
+        height: auto;
+        min-height: 120px;
+    }
+
+    #edu-note .section-heading {
+        padding: 18px;
+    }
+
+    #edu-note .section-heading h2 {
+        font-size: 1.45rem;
+    }
+
+    #edu-note .section-heading p {
+        font-size: 0.9rem;
+    }
+
+
+    /* ========================= */
+    /* PROJECTS */
+    /* ========================= */
 
     #projects-section {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
 
         gap: 10px;
-
-        width: 100%;
     }
 
     #projects-heading,
@@ -507,15 +670,15 @@ PHONE
     }
 
 
-    /* Skills */
+    /* ========================= */
+    /* SKILLS */
+    /* ========================= */
 
     #skills-section {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
 
         gap: 10px;
-
-        width: 100%;
     }
 
     #skills-heading,
@@ -530,36 +693,88 @@ PHONE
     }
 
 
-    .parent > .content-grid {
-        width: 100%;
-        height: auto;
-        min-height: 200px;
-
-        box-sizing: border-box;
-    }
-
-    /* Working */
+    /* ========================= */
+    /* CURRENT INTERESTS */
+    /* ========================= */
 
     #working-section {
-        grid-column: 1;
-        grid-row: auto;
-    
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-    
-        width: 100%;
-    
+
         gap: 10px;
     }
-    
+
     #working-heading,
     .working-card {
         grid-column: 1;
         grid-row: auto;
     }
-    
+
     .working-card {
-        min-height: 200px;
+        min-height: 180px;
         padding: 16px;
+    }
+
+
+    /* ========================= */
+    /* CONTACT */
+    /* ========================= */
+
+     #contact-section {
+        grid-column: 1;
+        grid-row: auto;
+
+        width: 100%;
+    }
+
+    #contact-heading {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+
+        background-color: rgba(13, 17, 23, 0.88);
+
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 12px;
+
+        overflow: hidden;
+    }
+
+    #contact-heading .section-heading {
+        height: auto;
+
+        padding: 22px 20px 10px;
+
+        border: none;
+        border-radius: 0;
+
+        background: transparent;
+    }
+
+    #contact-icons {
+        position: static;
+
+        transform: none;
+
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 12px 12px 22px;
+
+        gap: 6px;
+    }
+
+
+    .parent > .content-grid {
+        width: 100%;
+        height: auto;
+
+        box-sizing: border-box;
     }
 }

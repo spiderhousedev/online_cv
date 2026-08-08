@@ -2,6 +2,7 @@
 import './Grid.css';
 import Profile from '../components/Profile';
 import Heading from '../components/Heading';
+import Icons from '../components/Icons';
 
 function Grid() {
 
@@ -12,7 +13,18 @@ function Grid() {
                 <div id="profile-div" className="content-grid">
                     <Profile />
                 </div>
-                <div id="about-div" className="content-grid">About / Education</div>
+
+                <div id="edu-note">
+                    <Heading
+                        title={
+                            <>
+                                BEng Software Engineering at{" "}
+                                <span className="shu-text">SHU</span>
+                            </>
+                        }
+                        subtitle="Expected to Graduate June 2027"
+                    />
+                </div>
 
                 <section id="skills-section">
                     <div id="skills-heading">
@@ -74,9 +86,23 @@ function Grid() {
                 </div>
 
                 
-                <div id="contact-div" className="content-grid">
-                    <Heading title="Get in Touch" subtitle="Best ways to reach me" />
-                </div>
+                <section id="contact-section">
+
+                    <div id="contact-heading">
+                        <Heading
+                            title="Get in Touch"
+                            subtitle="Best ways to reach me"
+                        />
+                    
+
+                        <div id="contact-icons">
+                            <Icons url="https://www.linkedin.com/in/charlie-starling/" />
+                            <Icons url="https://github.com/spiderhousedev" />
+                            <Icons url="https://instagram.com/charliestarling" />
+                            <Icons url="mailto:contact.cstarlingdev@gmail.com" />
+                        </div>
+                    </div>
+                </section>
             </div>
 
         </>

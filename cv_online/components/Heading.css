@@ -20,6 +20,10 @@
     text-align: left;
 }
 
+.shu-text {
+    color: hsl(328, 52%, 34%);
+}
+
 .section-heading h2 {
     margin: 0;
 
