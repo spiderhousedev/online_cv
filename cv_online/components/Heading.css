@@ -1,28 +1,14 @@
-/* 
-
-.Heading-Component {
-    /* color: hsla(277, 82%, 80%, 0.881); */
-
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: hsla(0, 0%, 29%, 0.649); 
-    /* background: hsla(277, 82%, 80%, 0.881); */
-    /* height: 100%;
-    width: 100%; */
-/* } */ 
-
-/* SECTION HEADINGS */
-
 .section-heading {
     width: 100%;
     height: 100%;
 
     display: flex;
     flex-direction: column;
+
     justify-content: center;
     align-items: flex-start;
+
+    box-sizing: border-box;
 
     padding: 22px 28px;
 
@@ -39,7 +25,6 @@
 
     font-size: 1.8rem;
     font-weight: 600;
-    line-height: 1.2;
 
     color: hsl(57, 69%, 94%);
 }
@@ -48,7 +33,7 @@
     margin: 8px 0 0;
 
     font-size: 1rem;
-    font-weight: 400;
 
     color: rgba(255, 255, 255, 0.55);
 }
+

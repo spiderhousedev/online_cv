@@ -24,13 +24,32 @@ function Grid() {
                 <div id="skill-item-5" className="content-grid">5</div>
                 <div id="skill-item-6" className="content-grid">6</div>
 
-                <div id="projects-div" className="content-grid">
-                    <Heading title="Projects" subtitle="Cool stuff I've made"  />
-                </div>
-                <div id ="project-item-1" className="content-grid">1</div>
-                <div id ="project-item-2" className="content-grid">2</div>
-                <div id ="project-item-3" className="content-grid">3</div>
-                <div id ="project-item-4" className="content-grid">4</div>
+                <section id="projects-section">
+
+                    <div id="projects-heading">
+                        <Heading
+                            title="Projects"
+                            subtitle="Cool stuff I've made"
+                        />
+                    </div>
+
+                    <div className="project-card">
+                        Project 1
+                    </div>
+
+                    <div className="project-card">
+                        Project 2
+                    </div>
+
+                    <div className="project-card">
+                        Project 3
+                    </div>
+
+                    <div className="project-card">
+                        Project 4
+                    </div>
+
+                </section>
                 
 
                 <div id="working-div" className="content-grid">

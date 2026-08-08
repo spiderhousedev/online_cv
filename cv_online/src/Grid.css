@@ -76,47 +76,66 @@
    PROJECTS
    ========================================= */
 
-#projects-div {
-    grid-column: 7 / span 6;
-    grid-row: 2 / span 1;
+#projects-section {
+    grid-column: 7 / 13;
+    grid-row: 2 / span 6;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr 1fr;
+
+    gap: 10px;
+
+    padding: 10px;
+
+    border-radius: 12px;
+
+    background: rgba(0, 0, 0, 0.15);
 }
 
 
-/* First project row */
+/* Projects heading spans full width */
 
-#project-item-1 {
-    /* Old column 4 */
-    grid-column: 7 / span 3;
-
-    /* Old row 2 */
-    grid-row: 3 / span 2;
-}
-
-#project-item-2 {
-    /* Old column 5 */
-    grid-column: 10 / span 3;
-
-    grid-row: 3 / span 2;
+#projects-heading {
+    grid-column: 1 / -1;
+    grid-row: 1;
 }
 
 
-/* Second project row */
+/* Individual project cards */
 
-#project-item-3 {
-    /* Old column 6 */
-    grid-column: 7 / span 3;
+.project-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    grid-row: 5 / span 2;
+    min-height: 250px;
+
+    padding: 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+
+    background: rgba(13, 17, 23, 0.75);
+
+    color: hsl(57, 69%, 94%);
+
+    font-size: 1.5rem;
+
+    transition: 
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background-color 0.2s ease;
 }
 
-#project-item-4 {
-    grid-column: 10 / span 3;
+.project-card:hover {
+    transform: translateY(-2px);
 
-    /* Old row 3 */
-    grid-row: 5 / span 2;
+    border-color: hsla(277, 82%, 80%, 0.45);
+
+    background: rgba(18, 22, 28, 0.9);
 }
-
-
 
 /* =========================================
    SKILLS
@@ -283,6 +302,26 @@
         height: auto;
         min-height: 500px;
     }
+
+    #projects-section {
+        grid-column: 1 / -1;
+        grid-row: auto;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: auto;
+
+        width: 100%;
+
+        padding: 10px;
+    }
+
+    #projects-heading {
+        grid-column: 1 / -1;
+    }
+
+    .project-card {
+        min-height: 220px;
+    }
 }
 
 
@@ -310,11 +349,9 @@
 
     #profile-div,
     #about-div,
-    #projects-div,
-    #project-item-1,
-    #project-item-2,
-    #project-item-3,
-    #project-item-4,
+    #projects-section,
+    #projects-heading,
+    .project-card,
     #skills-div,
     #skill-item-1,
     #skill-item-2,
@@ -342,5 +379,28 @@
     #profile-div {
         height: auto;
         min-height: auto;
+    }
+
+    #projects-section {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+
+        gap: 10px;
+
+        padding: 8px;
+    }
+
+    #projects-heading {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .project-card {
+        grid-column: 1;
+        grid-row: auto;
+
+        min-height: 200px;
+
+        padding: 16px;
     }
 }
