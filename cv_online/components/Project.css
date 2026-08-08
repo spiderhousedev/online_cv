@@ -1,0 +1,289 @@
+/* =========================================
+   PROJECT
+========================================= */
+
+.project {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+
+    min-width: 0;
+    min-height: 0;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+
+    background-color: rgba(13, 17, 23, 0.75);
+
+    color: hsl(57, 69%, 94%);
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+/* =========================================
+   PROJECT HOVER
+========================================= */
+
+.project:hover {
+    transform: translateY(-2px);
+
+    border-color: hsla(277, 82%, 80%, 0.45);
+    background-color: rgba(18, 22, 28, 0.9);
+}
+
+
+/* =========================================
+   PROJECT IMAGE
+========================================= */
+
+.project-image-container {
+    width: 100%;
+
+    /*
+        Slightly shorter than 16:9 on desktop
+        to leave more room for project information.
+    */
+    aspect-ratio: 16 / 8.5;
+
+    overflow: hidden;
+    flex-shrink: 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.project-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.3s ease;
+}
+
+
+.project:hover .project-image {
+    transform: scale(1.03);
+}
+
+
+/* =========================================
+   PROJECT CONTENT
+========================================= */
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+
+    min-width: 0;
+    min-height: 0;
+
+    padding: 14px 16px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   PROJECT TITLE
+========================================= */
+
+.project-title {
+    margin: 0 0 6px;
+
+    /*
+        Reserves enough room for two lines so
+        every project's content stays aligned.
+    */
+    min-height: 2.4em;
+
+    color: hsl(57, 69%, 94%);
+
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+
+/* =========================================
+   PROJECT DESCRIPTION
+========================================= */
+
+.project-description {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 0.78rem;
+    line-height: 1.35;
+
+    /*
+        Prevent longer descriptions from pushing
+        the View Project link outside the card.
+    */
+    display: -webkit-box;
+
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   PROJECT LINK
+========================================= */
+
+.project-link {
+    /*
+        Push the link to the bottom of the
+        available content area.
+    */
+    margin-top: auto;
+
+    padding-top: 10px;
+
+    width: fit-content;
+
+    color: hsla(277, 82%, 80%, 0.95);
+
+    font-size: 0.82rem;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.project:hover .project-link {
+    color: hsla(277, 82%, 85%, 1);
+
+    transform: translateX(3px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .project {
+        height: 100%;
+    }
+
+
+    .project-image-container {
+        /*
+            Cards have more vertical space on
+            tablet, so return to normal 16:9.
+        */
+        aspect-ratio: 16 / 9;
+    }
+
+
+    .project-content {
+        padding: 14px;
+    }
+
+
+    .project-title {
+        margin-bottom: 6px;
+
+        min-height: 0;
+
+        font-size: 1.1rem;
+        line-height: 1.25;
+    }
+
+
+    .project-description {
+        font-size: 0.85rem;
+        line-height: 1.4;
+
+        -webkit-line-clamp: 3;
+    }
+
+
+    .project-link {
+        padding-top: 10px;
+
+        font-size: 0.9rem;
+    }
+
+}
+
+
+/* =========================================
+   PHONE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .project {
+        height: auto;
+        min-height: 0;
+    }
+
+
+    .project-image-container {
+        width: 100%;
+
+        aspect-ratio: 16 / 9;
+    }
+
+
+    .project-content {
+        padding: 14px;
+
+        overflow: visible;
+    }
+
+
+    .project-title {
+        margin: 0 0 6px;
+
+        min-height: 0;
+
+        font-size: 1.05rem;
+        line-height: 1.25;
+    }
+
+
+    .project-description {
+        font-size: 0.82rem;
+        line-height: 1.4;
+
+        -webkit-line-clamp: 3;
+    }
+
+
+    .project-link {
+        margin-top: 14px;
+
+        padding-top: 0;
+
+        font-size: 0.9rem;
+    }
+
+}

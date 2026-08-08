@@ -3,6 +3,7 @@ import './Grid.css';
 import Profile from '../components/Profile';
 import Heading from '../components/Heading';
 import Icons from '../components/Icons';
+import Project from "../components/Project";
 
 function Grid() {
 
@@ -50,19 +51,39 @@ function Grid() {
                     </div>
 
                     <div className="project-card">
-                        Project 1
+                        <Project
+                            title="Raytheon Sci-Toolset"
+                            description="Responsive website designed and developed for a local catering business."
+                            image={`${import.meta.env.BASE_URL}Raytheon_Project.png`}
+                            url="https://youtu.be/8O_TkUh7Emc"
+                        />
                     </div>
 
                     <div className="project-card">
-                        Project 2
+                        <Project
+                            title="Inventory Management System"
+                            description="Responsive website designed and developed for a local catering business."
+                            image={`${import.meta.env.BASE_URL}IMS_Project.png`}
+                            url="https://youtu.be/u4JzaGpDFXQ"
+                        />
                     </div>
 
                     <div className="project-card">
-                        Project 3
+                        <Project
+                            title="Hospital Admin System"
+                            description="Responsive website designed and developed for a local catering business."
+                            image={`${import.meta.env.BASE_URL}HMS.png`}
+                            url="https://youtu.be/JoxoJy-hdi0"
+                        />
                     </div>
 
                     <div className="project-card">
-                        Project 4
+                        <Project
+                            title="PoC | Customer Complaint Service"
+                            description="Responsive website designed and developed for a local catering business."
+                            image={`${import.meta.env.BASE_URL}Proof_of_Concept.png`}
+                            url="https://youtu.be/-AHNsdHQ1EY"
+                        />
                     </div>
 
                 </section>
