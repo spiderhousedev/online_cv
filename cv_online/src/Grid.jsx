@@ -4,6 +4,7 @@ import Profile from '../components/Profile';
 import Heading from '../components/Heading';
 import Icons from '../components/Icons';
 import Project from "../components/Project";
+import Skills from "../components/Skills"
 
 function Grid() {
 
@@ -28,16 +29,15 @@ function Grid() {
                 </div>
 
                 <section id="skills-section">
+
                     <div id="skills-heading">
                         <Heading
                             title="Skills"
-                            subtitle="Few examples, but not limited to" 
+                            subtitle="Few examples, but not limited to"
                         />
                     </div>
 
-                    <div className="skills-card">
-                        Skill 1
-                    </div>
+                    <Skills />
 
                 </section>
 

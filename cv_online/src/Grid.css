@@ -248,74 +248,8 @@ WHAT I'M WORKING ON
     background-color: rgba(18, 22, 28, 0.9);
 }
 
-/* =========================================
-SKILLS
-========================================= */
 
-#skills-section {
-    grid-column: 1 / 7;
-
-    /* Moved up from row 9 */
-    grid-row: 8 / span 5;
-
-    display: grid;
-
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: auto repeat(2, minmax(0, 1fr));
-
-    gap: 10px;
-
-    min-width: 0;
-}
-
-
-/* Skill heading spans full width */
-
-#skills-heading {
-    grid-column: 1 / -1;
-    grid-row: 1;
-}
-
-
-/* Individual skill cards */
-
-.skills-card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    grid-column: 1 / -1;
-    grid-row: 2;
-
-    min-width: 0;
-    min-height: 0;
-
-    padding: 20px;
-
-    box-sizing: border-box;
-
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 10px;
-
-    background-color: rgba(13, 17, 23, 0.75);
-
-    color: hsl(57, 69%, 94%);
-
-    font-size: 1.5rem;
-
-    transition:
-        transform 0.2s ease,
-        border-color 0.2s ease,
-        background-color 0.2s ease;
-}
-
-.skills-card:hover {
-    transform: translateY(-2px);
-
-    border-color: hsla(277, 82%, 80%, 0.45);
-    background-color: rgba(18, 22, 28, 0.9);
-}
-
+/* Individual category */
 
 /* =========================================
 WORKING ITEMS
@@ -405,7 +339,6 @@ TABLET
     #profile-div,
     #edu-note,
     #projects-section,
-    #skills-section,
     #working-section,
     #contact-section {
         grid-column: 1 / -1;
@@ -453,30 +386,6 @@ TABLET
     }
 
     .project-card {
-        min-height: 220px;
-    }
-
-
-    /* ========================= */
-    /* SKILLS */
-    /* ========================= */
-
-    #skills-section {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
-
-        gap: 10px;
-    }
-
-    #skills-heading {
-        grid-column: 1;
-        grid-row: auto;
-    }
-
-    .skills-card {
-        grid-column: 1;
-        grid-row: auto;
-
         min-height: 220px;
     }
 
@@ -546,7 +455,6 @@ PHONE
     #profile-div,
     #edu-note,
     #projects-section,
-    #skills-section,
     #working-section,
     #contact-section {
         grid-column: 1;
@@ -671,29 +579,6 @@ PHONE
 
 
     /* ========================= */
-    /* SKILLS */
-    /* ========================= */
-
-    #skills-section {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-
-        gap: 10px;
-    }
-
-    #skills-heading,
-    .skills-card {
-        grid-column: 1;
-        grid-row: auto;
-    }
-
-    .skills-card {
-        min-height: 200px;
-        padding: 16px;
-    }
-
-
-    /* ========================= */
     /* CURRENT INTERESTS */
     /* ========================= */
 
@@ -770,6 +655,31 @@ PHONE
         gap: 6px;
     }
 
+        /* Explicit mobile order */
+
+    #profile-div {
+        order: 1;
+    }
+
+    #edu-note {
+        order: 2;
+    }
+
+    #skills-section {
+        order: 3;
+    }
+
+    #projects-section {
+        order: 4;
+    }
+
+    #working-section {
+        order: 5;
+    }
+
+    #contact-section {
+        order: 6;
+    }
 
     .parent > .content-grid {
         width: 100%;
