@@ -1,7 +1,7 @@
 
 import './Grid.css';
 import Profile from '../components/Profile';
-import { AsciiArtDemo } from '../components/Ascii_Image';
+import Heading from '../components/Heading';
 
 function Grid() {
 
@@ -15,16 +15,16 @@ function Grid() {
                 <div id="about-div" className="content-grid">About / Education</div>
 
                 <div id="skills-div" className="content-grid">Skills</div>
-                <div id="skill-item-1" className="content-grid">
-                    <AsciiArtDemo />
-                </div>
+                <div id="skill-item-1" className="content-grid">1</div>
                 <div id="skill-item-2" className="content-grid">2</div>
                 <div id="skill-item-3" className="content-grid">3</div>
                 <div id="skill-item-4" className="content-grid">4</div>
                 <div id="skill-item-5" className="content-grid">5</div>
                 <div id="skill-item-6" className="content-grid">6</div>
 
-                <div id="projects-div" className="content-grid">Projects</div>
+                <div id="projects-div" className="content-grid">
+                    <Heading title="Projects" />
+                </div>
                 <div id ="project-item-1" className="content-grid">1</div>
                 <div id ="project-item-2" className="content-grid">2</div>
                 <div id ="project-item-3" className="content-grid">3</div>

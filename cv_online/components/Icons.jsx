@@ -1,6 +1,6 @@
 import { SocialIcon } from "react-social-icons";
 
-function Icons({ url, name }) {
+function Icons({ url }) {
     return (
         <div className="icon">
             <SocialIcon url={url} />
