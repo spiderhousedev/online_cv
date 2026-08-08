@@ -1,9 +1,15 @@
 import './Heading.css'
 
-function Heading ({ title } ){
+function Heading ({ title  , subtitle}){
     return (
         <>
-            <div className="Heading-Component">{title}</div>
+            <div className="section-heading">
+                <h2>{title}</h2>
+
+                {subtitle && (
+                    <p>{subtitle}</p>
+                )}
+            </div>
         </>
     );
 }

@@ -15,7 +15,7 @@ function Grid() {
                 <div id="about-div" className="content-grid">About / Education</div>
 
                 <div id="skills-div" className="content-grid">
-                    <Heading title="Skills" />
+                    <Heading title="Skills" subtitle="Few examples, but not limited to" />
                 </div>
                 <div id="skill-item-1" className="content-grid">1</div>
                 <div id="skill-item-2" className="content-grid">2</div>
@@ -25,7 +25,7 @@ function Grid() {
                 <div id="skill-item-6" className="content-grid">6</div>
 
                 <div id="projects-div" className="content-grid">
-                    <Heading title="Projects" />
+                    <Heading title="Projects" subtitle="Cool stuff I've made"  />
                 </div>
                 <div id ="project-item-1" className="content-grid">1</div>
                 <div id ="project-item-2" className="content-grid">2</div>
@@ -34,13 +34,15 @@ function Grid() {
                 
 
                 <div id="working-div" className="content-grid">
-                    <Heading title="What I'm Working On" />
+                    <Heading title="Current Interests" subtitle="What I'm working on" />
                 </div>
                 <div id="working-item-1" className="content-grid">1</div>
                 <div id="working-item-2" className="content-grid">2</div>
                 <div id="working-item-3" className="content-grid">3</div>
                 
-                <div id="contact-div" className="content-grid">Contact</div>
+                <div id="contact-div" className="content-grid">
+                    <Heading title="Get in Touch" subtitle="Best ways to reach me" />
+                </div>
             </div>
 
         </>
