@@ -14,15 +14,19 @@ function Grid() {
                 </div>
                 <div id="about-div" className="content-grid">About / Education</div>
 
-                <div id="skills-div" className="content-grid">
-                    <Heading title="Skills" subtitle="Few examples, but not limited to" />
-                </div>
-                <div id="skill-item-1" className="content-grid">1</div>
-                <div id="skill-item-2" className="content-grid">2</div>
-                <div id="skill-item-3" className="content-grid">3</div>
-                <div id="skill-item-4" className="content-grid">4</div>
-                <div id="skill-item-5" className="content-grid">5</div>
-                <div id="skill-item-6" className="content-grid">6</div>
+                <section id="skills-section">
+                    <div id="skills-heading">
+                        <Heading
+                            title="Skills"
+                            subtitle="Few examples, but not limited to" 
+                        />
+                    </div>
+
+                    <div className="skills-card">
+                        Skill 1
+                    </div>
+
+                </section>
 
                 <section id="projects-section">
 
@@ -51,13 +55,24 @@ function Grid() {
 
                 </section>
                 
-
-                <div id="working-div" className="content-grid">
-                    <Heading title="Current Interests" subtitle="What I'm working on" />
+                <div id="working-section">
+                    <div id="working-heading">
+                        <Heading 
+                            title="Current Interests" 
+                            subtitle= "What I'm working on"
+                        />
+                    </div>
+                    <div className="working-card">
+                        1
+                    </div>
+                    <div className="working-card">
+                        2
+                    </div>
+                    <div className="working-card">
+                        3
+                    </div>
                 </div>
-                <div id="working-item-1" className="content-grid">1</div>
-                <div id="working-item-2" className="content-grid">2</div>
-                <div id="working-item-3" className="content-grid">3</div>
+
                 
                 <div id="contact-div" className="content-grid">
                     <Heading title="Get in Touch" subtitle="Best ways to reach me" />
