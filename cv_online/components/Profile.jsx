@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
 import "./Profile.css";
 import Icons from "./Icons";
-import { AsciiArtDemo } from '../components/Ascii_Image';
+import { AsciiArtDemo } from "../components/Ascii_Image";
 
 function Profile() {
     const [showAscii, setShowAscii] = useState(false);
@@ -12,18 +13,37 @@ function Profile() {
             <div
                 id="profile-div2"
                 onClick={() => setShowAscii(!showAscii)}
+                title="Click to switch view"
             >
-                {showAscii ? (
-                    <div className="profile-ascii">
-                        <AsciiArtDemo />
-                    </div>
-                ) : (
-                    <img
-                        id="profile-img"
-                        src={`${import.meta.env.BASE_URL}me.jpeg`}
-                        alt="Charlie Starling"
-                    />
-                )}
+                <AnimatePresence mode="wait">
+                    {showAscii ? (
+                        <motion.div
+                            key="ascii"
+                            className="profile-ascii profile-switch-content"
+                            initial={{ opacity: 0, scale: 0.92 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.92 }}
+                            transition={{ duration: 0.25 }}
+                        >
+                            <AsciiArtDemo />
+                        </motion.div>
+                    ) : (
+                        <motion.img
+                            key="photo"
+                            id="profile-img"
+                            className="profile-switch-content"
+                            src={`${import.meta.env.BASE_URL}me.jpeg`}
+                            alt="Charlie Starling"
+                            initial={{ opacity: 0, scale: 0.92 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.92 }}
+                            transition={{ duration: 0.25 }}
+                        />
+                    )}
+                </AnimatePresence>
+
+                <span className="profile-click-hint"></span>
+                
             </div>
 
             <div id="profile-div3">
