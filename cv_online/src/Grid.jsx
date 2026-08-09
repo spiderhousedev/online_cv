@@ -53,7 +53,7 @@ function Grid() {
                     <div className="project-card">
                         <Project
                             title="Raytheon Sci-Toolset"
-                            description="Responsive website designed and developed for a local catering business."
+                            description="Online toolset developed as part of a group Scrum using RTX's Hallam API."
                             image={`${import.meta.env.BASE_URL}Raytheon_Project.png`}
                             url="https://youtu.be/8O_TkUh7Emc"
                         />
@@ -62,7 +62,7 @@ function Grid() {
                     <div className="project-card">
                         <Project
                             title="Inventory Management System"
-                            description="Responsive website designed and developed for a local catering business."
+                            description="Responsive website developed to manage a distribution company."
                             image={`${import.meta.env.BASE_URL}IMS_Project.png`}
                             url="https://youtu.be/u4JzaGpDFXQ"
                         />
@@ -71,7 +71,7 @@ function Grid() {
                     <div className="project-card">
                         <Project
                             title="Hospital Admin System"
-                            description="Responsive website designed and developed for a local catering business."
+                            description="Website designed and developed to handle hospital booking information. "
                             image={`${import.meta.env.BASE_URL}HMS.png`}
                             url="https://youtu.be/JoxoJy-hdi0"
                         />
@@ -80,7 +80,7 @@ function Grid() {
                     <div className="project-card">
                         <Project
                             title="PoC | Customer Complaint Service"
-                            description="Responsive website designed and developed for a local catering business."
+                            description="Proof of concept for a component diagram as part of a microservice architecture."
                             image={`${import.meta.env.BASE_URL}Proof_of_Concept.png`}
                             url="https://youtu.be/-AHNsdHQ1EY"
                         />
