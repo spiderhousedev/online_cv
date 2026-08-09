@@ -3,14 +3,14 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import { fileURLToPath, URL } from "node:url";
 
-export default defineConfig(({ command }) => ({
-  plugins: [react(), tailwindcss()],
+export default defineConfig({
+    plugins: [react(), tailwindcss()],
 
-  base: command === "build" ? "/online_cv/" : "/",
+    base: "/",
 
-  resolve: {
-    alias: {
-      "@": fileURLToPath(new URL("./src", import.meta.url)),
+    resolve: {
+        alias: {
+            "@": fileURLToPath(new URL("./src", import.meta.url)),
+        },
     },
-  },
-}));
+});
