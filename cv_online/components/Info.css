@@ -1,0 +1,206 @@
+
+.info {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+
+    min-width: 0;
+    min-height: 0;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+
+    background-color: rgba(13, 17, 23, 0.75);
+
+    color: hsl(57, 69%, 94%);
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+
+/* =========================================
+   Info IMAGE
+========================================= */
+
+.info-image-container {
+    width: 100%;
+
+    /*
+        Slightly shorter than 16:9 on desktop
+        to leave more room for project information.
+    */
+    aspect-ratio: 16 / 8.5;
+
+    overflow: hidden;
+    flex-shrink: 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.info-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.3s ease;
+}
+
+/* =========================================
+   Info CONTENT
+========================================= */
+
+.info-content {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+
+    min-width: 0;
+    min-height: 0;
+
+    padding: 14px 16px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   info TITLE
+========================================= */
+
+.info-title {
+    margin: 0 0 6px;
+
+    /*
+        Reserves enough room for two lines so
+        every project's content stays aligned.
+    */
+    min-height: 2.4em;
+
+    color: hsl(57, 69%, 94%);
+
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+
+/* =========================================
+   info DESCRIPTION
+========================================= */
+
+.info-description {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 0.78rem;
+    line-height: 1.35;
+
+    /*
+        Prevent longer descriptions from pushing
+        the View Project link outside the card.
+    */
+    display: -webkit-box;
+
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .info-image-container {
+        /*
+            Cards have more vertical space on
+            tablet, so return to normal 16:9.
+        */
+        aspect-ratio: 16 / 9;
+    }
+
+
+    .info-content {
+        padding: 14px;
+    }
+
+
+    .info-title {
+        margin-bottom: 6px;
+
+        min-height: 0;
+
+        font-size: 1.1rem;
+        line-height: 1.25;
+    }
+
+
+    .info-description {
+        font-size: 0.85rem;
+        line-height: 1.4;
+
+        line-clamp: 3;
+    }
+
+}
+
+
+/* =========================================
+   PHONE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .info-image-container {
+        width: 100%;
+
+        aspect-ratio: 16 / 9;
+    }
+
+    .info-content {
+        padding: 14px;
+
+        overflow: visible;
+    }
+
+    .info-title {
+        margin: 0 0 6px;
+
+        min-height: 0;
+
+        font-size: 1.05rem;
+        line-height: 1.25;
+    }
+
+
+    .info-description {
+        font-size: 0.82rem;
+        line-height: 1.4;
+
+        line-clamp: 3;
+    }
+
+
+}

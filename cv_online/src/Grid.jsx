@@ -5,6 +5,7 @@ import Heading from '../components/Heading';
 import Icons from '../components/Icons';
 import Project from "../components/Project";
 import Skills from "../components/Skills"
+import Info_Card from '../components/Info';
 
 function Grid() {
 
@@ -95,15 +96,25 @@ function Grid() {
                             subtitle= "What I'm working on"
                         />
                     </div>
-                    <div className="working-card">
-                        1
-                    </div>
-                    <div className="working-card">
-                        2
-                    </div>
-                    <div className="working-card">
-                        3
-                    </div>
+                    
+                    <Info_Card
+                        title="Spider House Sol."
+                        description="Started my own custom website / online tool business. Working with real-world clients."
+                        image={`${import.meta.env.BASE_URL}spider_house.png`}
+                    />
+                    
+                    <Info_Card
+                        title="Weekly Meal Planner"
+                        description="Application where two friends make recipes with images and shopping lists, assign them to a day of the week."
+                        image={`${import.meta.env.BASE_URL}food.png`}
+                    />
+                    
+                    <Info_Card
+                        title="This Online Resume!"
+                        description="Working on new React components to use within this resume."
+                        image={`${import.meta.env.BASE_URL}resume.png`}
+                    />
+
                 </div>
 
                 
