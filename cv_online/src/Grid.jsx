@@ -2,6 +2,7 @@
 import './Grid.css';
 import Profile from '../components/Profile';
 import Heading from '../components/Heading';
+import Project_Heading from '../components/Project_Heading';
 import Icons from '../components/Icons';
 import Project from "../components/Project";
 import Skills from "../components/Skills"
@@ -45,10 +46,17 @@ function Grid() {
                 <section id="projects-section">
 
                     <div id="projects-heading">
-                        <Heading
+                        <Project_Heading
                             title="Projects"
                             subtitle="Cool stuff I've made"
+                            link={
+                                `${import.meta.env.BASE_URL}CS_Resume_SWE.pdf`
+                            }
                         />
+
+                        
+                        
+                        
                     </div>
 
                     <div className="project-card">
